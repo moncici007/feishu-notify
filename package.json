@@ -10,6 +10,7 @@
     "type": "git",
     "url": "https://github.com/moncici007/feishu-notify"
   },
+  "website": "https://github.com/moncici007/feishu-notify.git",
   "keywords": [
     "feishu",
     "notify",
