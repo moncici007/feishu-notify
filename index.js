@@ -1,5 +1,6 @@
 import https from 'https';
 import dotenv from 'dotenv';
+import { log } from '@moncici/log'
 
 //SELL https://open.feishu.cn/open-apis/bot/v2/hook/79bfd342-***-***
 //BUY https://open.feishu.cn/open-apis/bot/v2/hook/e7b3931f-******c
@@ -41,21 +42,21 @@ export function doNotify(accessToken, msg) {
         const jsonData = JSON.parse(data);
   
         if (jsonData.msg === 'success') {
-          console.log('消息发送成功');
+          log('消息发送成功');
         } else {
           // console.error('消息发送失败', jsonData.errmsg);
-          console.error('消息发送失败', jsonData.msg);
+          log('消息发送失败', jsonData.msg);
         }
       });
     });
   
     req.on('error', (error) => {
-      console.error(error);
+      log(error);
     });
   
     req.write(JSON.stringify(message));
     req.end();
   }
 
-  notify('SELL', " nice pirce")
-  notify('BUY', " nice pirce")
+  // notify('SELL', " nice pirce")
+  // notify('BUY', " nice pirce")

@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/moncici007/feishu-notify#readme",
   "dependencies": {
+    "@moncici/log": "^1.0.2",
     "dotenv": "^16.4.5",
     "https": "^1.0.0"
   },
